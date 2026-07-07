@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta viewport="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                display: block;
+                margin: 0 auto;
+                padding: 0%;
+                background-repeat:repeat;
+                background-size: cover;
+                background-color: #000;
+            }
+            .links{
+                display: flex;
+                width: 100%;
+                height: 50px;
+                margin: 0px;
+                padding: 10px;
+                list-style-type: none;
+                justify-content:center;
+                align-items:center;
+                gap: 80px;
+                background-image: linear-gradient(90deg,black 1%,rgb(49, 41, 196),rgb(70, 62, 235),rgb(49, 41, 196),black);
+            }
+            .logo{
+                position: absolute;
+                width: 200px;
+                height: auto;
+                margin: 5px 0px;
+                margin-left: 7%;
+                padding: 0%;
+
+            }
+            a{
+                color: grey;
+                cursor: default;
+                text-decoration: none;
+            }
+            .links li a:hover{
+                color: white;
+                cursor: pointer;
+            }
+            .active{
+                color: orange;
+                text-underline-offset: 3px;
+                text-decoration: underline;
+            }
+            .selectors{
+                display: flex;
+                width: 100%;
+                height: auto;
+                justify-content:left;
+                gap: 10px;
+                margin: 0px auto;
+                background-color: rgba(49, 41, 196, 50);
+                /*background-image: linear-gradient(180deg, #000, rgb(49, 41, 196),rgba(49, 41, 196,50));*/
+            }
+            .select{
+                width: 50px;
+                height: auto;
+                margin: 0 auto;
+            }
+                /* Dropdown Button */
+            .dropbtn {
+            background-color: rgba(49, 41, 196, 50);
+            /*background-image: linear-gradient(180deg, #000, rgb(49, 41, 196),rgba(49, 41, 196,50));*/
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            }
+
+            /* Dropdown button on hover & focus */
+            .dropbtn:hover, .dropbtn:focus {
+            background-color: orange;
+            }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #ddd;}
+
+            /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+            .show {display:block;}
+        </style>
+        <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction1() {
+            document.getElementById("recom").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function myFunction2() {
+            document.getElementById("genres").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function myFunction3() {
+            document.getElementById("Platform").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+        </script>
+    </head>
+    <body>
+        <img class="logo" src="./assets/logoW.png"></img>
+        <ul class="links">
+            <li>
+                <a class="active" href="index.html">
+                    GAMES
+                </a>
+            </li>
+            <li>
+                <a>
+                    ABOUT
+                </a>
+            </li>
+            <li>
+                <a>
+                    SUPPORT
+                </a>
+            </li>
+        </ul>
+        <div class="selectors">
+            <div class="dropdown">
+                <button onclick="myFunction1()" class="dropbtn">Recommendations</button>
+                    <div id="recom" class="dropdown-content">
+                        <a href="#">Latest</a>
+                        <a href="#">Popular</a>
+                        <a href="#">Top Rated</a>
+                    </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction2()" class="dropbtn">Genres</button>
+                    <div id="genres" class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction3()" class="dropbtn">Platforms</button>
+                    <div id="Platform" class="dropdown-content">
+                        <a href="#">Web</a>
+                        <a href="#">Windows</a>
+                        <a href="#">Android</a>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
